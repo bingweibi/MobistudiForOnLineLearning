@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="xyz.kfdykme.mobistudi.activity.DataZoneActivity"
+    tools:showIn="@layout/activity_data_zone">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <!--<LinearLayout-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:orientation="vertical">-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/content_data_zone_course"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:gravity="left"-->
+            <!--android:paddingLeft="10dp"-->
+            <!--android:layout_margin="5dp"-->
+            <!--android:text="我的课程："-->
+            <!--/>-->
+
+        <!--<Spinner-->
+            <!--android:id="@+id/content_data_zone_spinner"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="40dp"-->
+            <!--android:layout_margin="10dp"/>-->
+
+        <!--<View-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="0.5dp"-->
+            <!--android:background="#333"/>-->
+        <!--<android.support.v7.widget.RecyclerView-->
+            <!--android:id="@+id/content_data_zone_rv"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"/>-->
+
+        <!--<View-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="1dp"-->
+            <!--android:background="#333"/>-->
+        <!--<RelativeLayout-->
+            <!--android:id="@+id/rl_detail"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent">-->
+
+            <!--<RelativeLayout-->
+                <!--android:id="@+id/rl_detail_top"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent">-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/content_data_zone_to_detail"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_alignParentRight="true"-->
+                    <!--android:layout_margin="10dp"-->
+                    <!--android:background="@color/colorPrimary"-->
+                    <!--android:padding="10dp"-->
+                    <!--android:text="进入课程"-->
+                    <!--android:textColor="#eeeeee"-->
+                    <!--android:textSize="25sp" />-->
+
+                <!--<View-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="3dp"-->
+                    <!--android:background="@color/colorPrimary"-->
+                    <!--android:layout_marginRight="10dp"-->
+                    <!--android:layout_below="@+id/content_data_zone_course_title"/>-->
+                <!--<TextView-->
+                    <!--android:id="@+id/content_data_zone_course_title"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_alignParentLeft="true"-->
+                    <!--android:layout_alignParentStart="true"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:text="当前没有选择课程"-->
+                    <!--android:padding="10dp"-->
+                    <!--android:textColor="@color/colorPrimary"-->
+                    <!--android:textSize="25sp"/>-->
+            <!--</RelativeLayout>-->
+
+            <!--<RelativeLayout-->
+                <!--android:layout_below="@id/rl_detail_top"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent">-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/content_data_zone_question_sum"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_alignParentLeft="true"-->
+                    <!--android:layout_margin="10dp"-->
+                    <!--android:background="@color/colorPrimary"-->
+                    <!--android:padding="10dp"-->
+                    <!--android:text="题目总数"-->
+                    <!--android:textColor="#eeeeee"-->
+                    <!--android:textSize="16sp" />-->
+
+                <!--<View-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="3dp"-->
+                    <!--android:background="@color/colorPrimary"-->
+                    <!--android:layout_marginLeft="10dp"-->
+                    <!--android:layout_marginRight="40dp"-->
+                    <!--android:layout_below="@+id/content_data_zone_question_sum_number"/>-->
+                <!--<TextView-->
+                    <!--android:id="@+id/content_data_zone_question_sum_number"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_toRightOf="@id/content_data_zone_question_sum"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:text="16"-->
+                    <!--android:padding="10dp"-->
+                    <!--android:textColor="@color/colorPrimary"-->
+                    <!--android:textSize="16sp"/>-->
+            <!--</RelativeLayout>-->
+
+        <!--</RelativeLayout>-->
+
+
+
+    <!--</LinearLayout>-->
+
+
+</android.support.v4.widget.NestedScrollView>

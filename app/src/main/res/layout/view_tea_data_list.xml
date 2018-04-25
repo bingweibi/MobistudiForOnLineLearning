@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    >
+
+    <Button
+        android:id="@+id/bt1"
+        android:layout_width="match_parent"
+        android:text="数据结构1班"
+        android:layout_height="72dp"
+        android:textColor="#f60"
+        android:background="@null"
+        android:textSize="30sp"/>
+
+    <Button
+        android:id="@+id/bt2"
+        android:layout_width="match_parent"
+        android:textColor="#f60"
+        android:background="@null"
+        android:textSize="30sp"
+        android:text="数据结构2班"
+        android:layout_height="72dp"
+        android:layout_marginTop="8dp"/>
+
+</LinearLayout>

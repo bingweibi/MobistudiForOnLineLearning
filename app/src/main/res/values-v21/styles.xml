@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- App Theme Light -->
+
+    <style name="AppThemeLight" parent="BaseAppThemeLight">
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:windowActivityTransitions">true</item>
+    </style>
+
+    <!-- App Theme Dark -->
+
+    <style name="AppThemeDark" parent="BaseAppThemeDark">
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:windowActivityTransitions">true</item>
+    </style>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:statusBarColor">@color/status_bar_color</item>
+        <!--<item name="android:navigationBarColor" tools:targetApi="21">@color/colorPrimary</item>-->
+    </style>
+
+
+    <!--MobarActivity Theme-->
+    <style name="MobarAppTheme" parent="@style/Theme.AppCompat.Light">
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+
+        <!-- Toolbar Theme / Apply white arrow -->
+        <item name="colorControlNormal">@android:color/white</item>
+        <item name="actionBarTheme">@style/AppTheme.AppBarOverlay</item>
+
+        <!-- Material Theme -->
+        <item name="colorPrimary">@color/color_primary</item>
+        <item name="colorPrimaryDark">@color/color_primary_dark</item>
+        <item name="colorAccent">@color/color_accent</item>
+
+        <item name="android:textColorPrimary">@android:color/white</item>
+
+        <item name="android:windowTranslucentStatus" tools:targetApi="21">true</item>
+        <item name="android:navigationBarColor" tools:targetApi="21">@color/navigationBarColor</item>
+        <item name="android:windowDrawsSystemBarBackgrounds" tools:targetApi="21">true</item>
+    </style>
+
+    <!--LoginActivity Theme-->
+    <style name="LoginAppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimary">#03A9F4</item>
+        <item name="colorPrimaryDark">#0288D1</item>
+        <item name="colorAccent">#2fa881</item>
+
+        <!-- set Can use Activity transitions -->
+        <item name="android:windowTranslucentStatus" tools:targetApi="21">true</item>
+        <item name="android:windowTranslucentNavigation" tools:targetApi="21">true</item>
+        <item name="android:windowContentTransitions" tools:targetApi="21">true</item>
+    </style>
+
+
+
+</resources>

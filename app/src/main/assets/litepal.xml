@@ -1,0 +1,9 @@
+<litepal>
+    <dbname value = "cat_mobistudi"/>
+    <version value="6"/>
+    <list>
+        <mapping class="cat.mobistudi.Course"/>
+        <mapping class="cat.mobistudi.Question"/>
+        <mapping class="cat.mobistudi.TextErrorContent"/>
+    </list>
+</litepal>
