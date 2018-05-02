@@ -1,7 +1,5 @@
 package xyz.kfdykme.mobistudi.fragment;
 
-import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -20,17 +18,12 @@ import chinaykc.mobistudi.R;
  * create an instance of this fragment.
  */
 public class IntraductionFragment extends Fragment {
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
 
-    // TODO: Rename and change types of parameters
+    private static final String ARG_PARAM1 = "param1";
     private String mParam1;
 
-
-
     public IntraductionFragment() {
-        // Required empty public constructor
+
     }
 
     /**
@@ -40,7 +33,6 @@ public class IntraductionFragment extends Fragment {
      * @param param1 Parameter 1.
      * @return A new instance of fragment IntraductionFragment.
      */
-    // TODO: Rename and change types and number of parameters
     public static IntraductionFragment newInstance(String param1) {
         IntraductionFragment fragment = new IntraductionFragment();
         Bundle args = new Bundle();
@@ -62,15 +54,8 @@ public class IntraductionFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_intraduction, container, false);
-        TextView textView = (TextView) view.findViewById(R.id.fragment_intraduction_textview);
+        TextView textView =  view.findViewById(R.id.fragment_intraduction_textview);
         textView.setText(mParam1);
         return view;
     }
-
-
-
-
-
-
-
 }

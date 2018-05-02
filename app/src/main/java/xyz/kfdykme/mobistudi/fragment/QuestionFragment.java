@@ -46,7 +46,7 @@ public class QuestionFragment extends BaseFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         mView = inflater.inflate(R.layout.fragment_questions,container,false);
-        mTvStart = (TextView) mView.findViewById(R.id.fragment_question_start_do_text_view);
+        mTvStart = mView.findViewById(R.id.fragment_question_start_do_text_view);
         return mView;
     }
 

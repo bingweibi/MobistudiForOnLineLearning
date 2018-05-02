@@ -32,7 +32,9 @@ import chinaykc.mobistudi.R;
 import xyz.kfdykme.mobistudi.bean.StudyCourse;
 import xyz.kfdykme.mobistudi.common.MobiActivity;
 import xyz.kfdykme.mobistudi.eventbus.CourseDetailEvent;
+import xyz.kfdykme.mobistudi.fragment.CommentFragment;
 import xyz.kfdykme.mobistudi.fragment.IntraductionFragment;
+import xyz.kfdykme.mobistudi.fragment.MoreFragment;
 import xyz.kfdykme.mobistudi.fragment.QuestionFragment;
 
 /**
@@ -68,10 +70,10 @@ public class CourseDetailActivity extends MobiActivity {
         setContentView(R.layout.activity_curese_detail);
 
         mFragments = new ArrayList<>();
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
-        fab = (FloatingActionButton) findViewById(R.id.fab);
-        tabLayout = (TabLayout) findViewById(R.id.tabs);
-        mVideoView = (xyz.kfdykme.mobistudi.CustomVideoView) findViewById(R.id.courseVideo);
+        toolbar = findViewById(R.id.toolbar);
+        fab = findViewById(R.id.fab);
+        tabLayout = findViewById(R.id.tabs);
+        mVideoView =  findViewById(R.id.courseVideo);
         initToolbar(toolbar);
         initView();
     }
@@ -81,11 +83,11 @@ public class CourseDetailActivity extends MobiActivity {
         super.onResume();
         if (mCourse == null){
 
-        }else{
+        }else if (mFragments.size()==0){
             mFragments.add(IntraductionFragment.newInstance(mCourse.getDescription()));
             mFragments.add(QuestionFragment.newInstance(mCourse));
-            mFragments.add(PlaceholderFragment.newInstance(mFragments.size()+1));
-            mFragments.add(PlaceholderFragment.newInstance(mFragments.size()+1));
+            mFragments.add(MoreFragment.newInstance(mCourse));
+            mFragments.add(CommentFragment.newInstance(mCourse));
             mSectionsPagerAdapter.notifyDataSetChanged();
         }
 
@@ -106,16 +108,10 @@ public class CourseDetailActivity extends MobiActivity {
 
     }
 
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-
-    }
-
     private void initView(){
 
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
-        mViewPager = (ViewPager) findViewById(R.id.container);
+        mViewPager = findViewById(R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapter);
 
         tabLayout.setupWithViewPager(mViewPager);
@@ -165,7 +161,7 @@ public class CourseDetailActivity extends MobiActivity {
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
             View rootView = inflater.inflate(R.layout.fragment_curese_detail, container, false);
-            TextView textView = (TextView) rootView.findViewById(R.id.section_label);
+            TextView textView =  rootView.findViewById(R.id.section_label);
             textView.setText(getString(R.string.section_format, getArguments().getInt(ARG_SECTION_NUMBER)));
             return rootView;
         }

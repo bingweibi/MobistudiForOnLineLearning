@@ -32,7 +32,7 @@ public class SeriesFragment extends Fragment {
                 //.bitmapTransform(new BlurTransformation(mContext,15,2)) // “23”：设置模糊度(在0.0到25.0之间)，默认”25";"4":图片缩放比例,默认“1”。
                 .into((ImageView)view.findViewById(R.id.zhuanti0));
 
-        CardView cardView = (CardView) view.findViewById(R.id.best_series_1);
+        CardView cardView =  view.findViewById(R.id.best_series_1);
         cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -67,6 +67,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private Button btLogin;
     private String userName;
     private StudyUser me;
+    private int flag;
 
     private void replaceFragment(Fragment fragment) {
         FragmentManager fragmentManager = getSupportFragmentManager();
@@ -80,6 +81,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
             switch (item.getItemId()) {
                 case R.id.navigation_home:
                     replaceFragment(new HomeFragment());
@@ -97,7 +99,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             }
             return false;
         }
-
     };
 
     @Override
@@ -121,22 +122,24 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         replaceFragment(new HomeFragment());
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar =  findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
+        BottomNavigationView navigation =  findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
         toggle.syncState();
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        NavigationView navigationView =  findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
         loadedInit();
+
+        flag = getIntent().getIntExtra("series",-1);
     }
 
     @Override

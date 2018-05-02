@@ -27,19 +27,24 @@ public class ActivitySeriesContent extends AppCompatActivity {
             {
                 new SeriesContent(0, 1, 1, "01:00", "骑士周游问题"),
                 new SeriesContent(0, 2, 2, "01:00", "图的基本概念"),
-                new SeriesContent(0, 3, 3, "01:00", "邻接矩阵"),
-                new SeriesContent(0, 4, 4, "01:00", "邻接表"),
-                new SeriesContent(0, 5, 5, "01:00", "十字链表"),
-                new SeriesContent(0, 6, 6, "01:00", "广度优先遍历"),
-                new SeriesContent(0, 7, 7, "01:00", "深度优先遍历"),
-                new SeriesContent(0, 8, 8, "01:00", "递归")},
+                new SeriesContent(0, 3, 3, "01:00", "邻接矩阵")},
+            {
+                    new SeriesContent(0, 4, 4, "01:00", "邻接表"),
+                    new SeriesContent(0, 5, 5, "01:00", "十字链表")},
             {
                 new SeriesContent(0, 6, 6, "01:00", "循环链表"),
                 new SeriesContent(0, 7, 7, "01:00", "约瑟夫环"),
                 new SeriesContent(0, 8, 8, "01:00", "栈的顺序存储")},
             {
                 new SeriesContent(0, 6, 6, "01:00", "递归"),
-                new SeriesContent(0, 7, 7, "01:00", "回溯算法解决八皇后问题")}
+                new SeriesContent(0, 7, 7, "01:00", "回溯算法解决八皇后问题")},
+            {
+                new SeriesContent(0, 6, 6, "01:00", "广度优先遍历"),
+                new SeriesContent(0, 7, 7, "01:00", "深度优先遍历"),
+                new SeriesContent(0, 8, 8, "01:00", "递归")},
+            {
+                new SeriesContent(0, 6, 6, "01:00", "队列的数组实现"),
+                new SeriesContent(0, 7, 7, "01:00", "队列的链表实现")}
     };
 
 
@@ -51,13 +56,12 @@ public class ActivitySeriesContent extends AppCompatActivity {
         if (actionbar != null) {
             actionbar.hide();
         }
-        TextView title = (TextView) findViewById(R.id.xilietiaozhuan_title);
+        TextView title =  findViewById(R.id.xilietiaozhuan_title);
         title.setText(getIntent().getStringExtra("title"));
-        TextView content = (TextView) findViewById(R.id.xilietiaozhuan_content);
+        TextView content =  findViewById(R.id.xilietiaozhuan_content);
         content.setText(getIntent().getStringExtra("content"));
         initSeriesContent();
-        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.series_content_recycler_view);
-        //GridLayoutManager layoutManager = new GridLayoutManager(this, 2);
+        RecyclerView recyclerView =  findViewById(R.id.series_content_recycler_view);
         StaggeredGridLayoutManager layoutManager = new StaggeredGridLayoutManager(1, StaggeredGridLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(layoutManager);
         adapter = new SeriesContentAdapter(seriesContentList);
@@ -68,9 +72,6 @@ public class ActivitySeriesContent extends AppCompatActivity {
         seriesContentList.clear();
 
         int a = getIntent().getIntExtra("position", 0);
-        if(a >= 3){
-            a=0;
-        }
         seriesContentList.addAll(Arrays.asList(seriesContents[a]));
     }
 }
